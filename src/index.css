@@ -1,0 +1,202 @@
+* {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+/*********************** 
+
+LINK STYLE on BREADCRUMB 
+Login / Register / Recovery email
+
+***********************/
+
+.breadcrumbDiv{
+  justify-content: center;
+  margin: 0 auto;
+  height: 50px;
+}
+
+.breadcrumb{
+  background-color: white !important;
+  background: white !important;
+}
+
+.centrelizerForm{
+  justify-content: center !important;
+  margin: 0 auto !important;
+}
+
+.linkBreadcrumbLogin{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #3a4d5e;
+  font-weight: 600;
+  height: 100%;
+  line-height: 100%;
+  display: 'flex';
+}
+
+.linkBreadcrumbLogin:link{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #3a4d5e;
+  font-weight: 600;
+}
+
+.linkBreadcrumbLogin:visited{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #3a4d5e;
+  font-weight: 600;
+}
+
+.linkBreadcrumbLogin:hover{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.05rem;
+  color: #7b848c;
+  font-weight: 700;
+  transition: 0.1s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.linkBreadcrumbLogin:active{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #3a4d5e;
+  font-weight: 600;
+}
+
+/*********************** 
+
+LINK STYLE on REGISTER PILL 
+
+***********************/
+
+
+.linkStyleRegisterPill{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.linkStyleRegisterPill:link{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.linkStyleRegisterPill:visited{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.linkStyleRegisterPill:hover{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.linkStyleRegisterPill:active{
+  display: inline-block;
+  text-decoration: none;
+}
+
+/*********************** 
+
+REGISTER PILL 
+
+***********************/
+
+.registerPill{
+  background: #e38f10;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 12px 20px 12px 20px;
+  transition: 0.2s;
+}
+
+.registerPill:link{
+  background: #e38f10;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.registerPill:visited{
+  background: #e38f10;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.registerPill:hover{
+  background: #eda12b;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 14px 22px 14px 22px;
+  transition: 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.registerPill:active{
+  background: #e38f10;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/*********************** 
+
+REGISTER HERE LINK
+
+***********************/
+
+.registerHereLink{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #253edb;
+  font-weight: 600;
+  height: 100%;
+  line-height: 100%;
+}
+
+.registerHereLink:link{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #253edb;
+  font-weight: 600;
+}
+
+.registerHereLink:visited{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #253edb;
+  font-weight: 600;
+}
+
+.registerHereLink:hover{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #0023ff;
+  font-size: 1.01rem;
+  font-weight: 700;
+  transition: 0.1s;
+}
+
+.registerHereLink:active{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #253edb;
+  font-weight: 600;
+}

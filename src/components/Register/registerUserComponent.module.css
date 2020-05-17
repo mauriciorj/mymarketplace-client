@@ -1,0 +1,253 @@
+.subRegisterAreas{
+    color: #28bd26;
+}
+
+.breadcrumbMainItem{
+    width: 75px;
+}
+
+.breadcrumbDiv{
+    background: white !important;
+    background-color: white !important;
+}
+
+.breadcrumb{
+    background-color: white !important;
+    background: white !important;
+  }
+
+.formTitle{
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.formMargin{
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.labelStyle{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.inputConfig{
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputConfig::placeholder{
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputConfig:focus{
+    color: #007bff !important;
+    border: 2px solid #007bff;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: 0.2s ease-in-out;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputGroupPrepend{    
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    background-color: white !important;
+    border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;}
+
+.inputGroup{
+    background-color: white !important;
+    background: white !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.buttonConfig{
+    margin-left: 55px !important;
+    margin-top: 20px !important;
+    font-family: 'Manrope', sans-serif;
+}
+
+.hrConfig{
+    margin-top: 80px;
+    background: #e0e0e0;
+}
+
+.registerDiv{
+    margin-top: 30px;
+}
+
+.registerText{
+    font-family: 'Manrope', sans-serif;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+.formGroupMargin{
+    margin-top: 10px;
+}
+
+.dropDownCountry{
+    padding-top: 5px;
+    margin-left: 12px;
+}
+
+.dropDownProvince{
+    padding-top: 5px;
+    margin-left: 12px;
+}
+
+.dropDownProvinceMinWidth{
+    min-width: 250px !important;
+}
+
+.dropDownCountryMinWidth{
+    min-width: 250px !important;
+}
+
+.inputMobileRow{
+    padding-left: 20px;
+}
+
+.inputMobile1{
+    max-width: 55px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+.inputMobile1::placeholder{
+    max-width: 55px !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+.inputMobile1:focus{
+    max-width: 55px !important;
+    color: #007bff !important;
+    border: 2px solid #007bff;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: 0.2s ease-in-out;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputMobile2{
+    max-width: 55px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.inputMobile2::placeholder{
+    max-width: 55px !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.inputMobile2:focus{
+    max-width: 55px !important;
+    color: #007bff !important;
+    border: 2px solid #007bff;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: 0.2s ease-in-out;
+    outline: none !important;
+    box-shadow: none !important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.inputMobile3{
+    max-width: 65px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+.inputMobile3::placeholder{
+    max-width: 65px !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+.inputMobile3:focus{
+    max-width: 65px !important;
+    color: #007bff !important;
+    border: 2px solid #007bff;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: 0.2s ease-in-out;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.radioConfig{
+    width: 100px !important;
+}
