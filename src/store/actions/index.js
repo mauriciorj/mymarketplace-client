@@ -3,4 +3,10 @@ export {
     recoveryEmailInit,
     recoveryEmailFailed,
     recoveryEmailSuccess,
+    recoveryTokenCheck,
+    recoveryTokenCheckSuccess,
+    recoveryTokenCheckFailed,
+    resetPassword,
+    resetPasswordSuccess,
+    resetPasswordFailed
 } from './login';

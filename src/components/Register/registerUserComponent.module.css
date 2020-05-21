@@ -75,7 +75,8 @@
     border-bottom: 1px solid #007bff !important;
     border-radius: 0 !important;
     outline: none !important;
-    box-shadow: none !important;}
+    box-shadow: none !important;
+}
 
 .inputGroup{
     background-color: white !important;
