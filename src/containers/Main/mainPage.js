@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './main.module.css'
+import classes from './mainPage.module.css'
 import { Link } from 'react-router-dom';
 import HeaderMainPage from '../../components/header/header';
 import Jumbotron from '../../components/mainPage/jumbotron';

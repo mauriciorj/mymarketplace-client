@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Main from './containers/main/main';
+import main from './containers/main/mainPage';
 import RegisterUser from './containers/createAccount/createUserAccount';
 import RegisterOption from './containers/createAccount/accountOptions';
 import AboutUs from './containers/main/aboutUs';
@@ -23,7 +23,7 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/recoveryPassword" component={RecoveryPassword} />
           <Route path="/accountCreated" component={AccountCreated}/>
-          <Route path="/" component={Main} />
+          <Route path="/" component={main} />
         </Switch>
       </div>
     );
