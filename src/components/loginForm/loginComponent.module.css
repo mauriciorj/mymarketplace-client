@@ -1,18 +1,12 @@
-.breadcrumMainItem{
-    width: 75px;
-}
-
 .formTitle{
     justify-content: center;
     font-family: 'Manrope', sans-serif;
     font-size: 2rem;
     font-weight: 500;
-    margin-top: 30px;
 }
 
 .formMargin{
-    margin-top: 30px;
-    padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 .labelStyle{
@@ -45,6 +39,38 @@
 .inputConfig:focus{
     color: #007bff !important;
     border: 2px solid #007bff;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: 0.2s ease-in-out;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputConfigInvalid{
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid red !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputConfigInvalid::placeholder{
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputConfigInvalid:focus{
+    color: red !important;
+    border: 2px solid red;
     font-family: 'Manrope', sans-serif !important;
     font-size: 1rem !important;
     font-weight: 600 !important;
@@ -90,3 +116,8 @@
     font-size: 1rem;
     font-family: 'Manrope', sans-serif !important;
 }
+
+.AlertPassword{
+    text-align: center !important;
+    margin-top: 20px;
+  }

@@ -3,8 +3,9 @@ import axios from '../../axios/axios';
 
 
 // CHECK IF EMAIL EXIST ON DATABASE
-export const recoveryEmailInit = (email) => {
+export const recoveryEmail = (email) => {
     return dispatch => {
+        dispatch(recoveryEmailStart());
         axios.get('/recoveryPassword/' + email)
             .then(response => {
                 dispatch(recoveryEmailSuccess(response.data));
@@ -14,6 +15,12 @@ export const recoveryEmailInit = (email) => {
             });
     };
 };
+
+export const recoveryEmailStart = () => {
+    return{
+        type: actionTypes.RECOVERY_EMAIL_START
+    }
+}
 
 export const recoveryEmailSuccess = (valid) => {
     return{
@@ -33,7 +40,7 @@ export const recoveryEmailFailed = (error) =>{
 // CHECK IF RECOVERY PASSWORD TOKEN IS VALID OR EXPIRED
 export const recoveryTokenCheck = (token) => {
     return dispatch => {
-        axios.get('/insertnewpassword?token=' + token)
+        axios.get('/checkTokenValidity?token=' + token)
         .then(response => {
             dispatch(recoveryTokenCheckSuccess(response.data));
         })
@@ -61,13 +68,20 @@ export const recoveryTokenCheckFailed = (error) => {
 //RESET PASSWORD
 export const resetPassword = (tokenUrl, password) => {
     return dispatch => {
-        axios.post('/insertnewpassword?token=' + tokenUrl + '?newpass=' + password)
+        dispatch(resetPasswordStart());
+        axios.post('/insertnewpassword?token=' + tokenUrl + '&newpass=' + password)
         .then(response => {
             dispatch(resetPasswordSuccess(response.data));
         })
         .catch(error => {
             dispatch(resetPasswordFailed(error));
         })
+    }
+}
+
+export const resetPasswordStart = () => {
+    return{
+        type: actionTypes.RESET_PASSWORD_START
     }
 }
 
@@ -84,3 +98,39 @@ export const resetPasswordFailed = (error) => {
         error: error
     };
 };
+
+
+// LOGIN
+export const sendLogin = (email, password) => {
+    return dispatch => {
+        dispatch(sendLoginStart());
+        axios.get('/login?user=' + email + '&passuser=' + password)
+        .then(response => {
+            dispatch(sendLoginSuccess(response.data));
+        })
+        .catch(error => {
+            dispatch(sendLoginFailed(error));
+        })
+    }
+}
+
+export const sendLoginStart = () => {
+    return{
+        type: actionTypes.LOGIN_USER_START,
+        loginUserResult: null
+    }
+}
+
+export const sendLoginSuccess = (loginUserResult) => {
+    return{
+        type: actionTypes.LOGIN_USER_SUCCESS,
+        loginUserResult: loginUserResult
+    }
+}
+
+export const sendLoginFailed = (error) => {
+    return{
+        type: actionTypes.LOGIN_USER_FAILED,
+        error: error
+    }
+}

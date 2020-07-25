@@ -1,0 +1,21 @@
+.button{
+    margin-top: -4px !important;
+}
+
+.navText{
+    font-family: "Manrope", sans-serif !important;
+    color: black !important;
+    font-size: 0.9rem;
+}
+
+.navText:hover{
+    font-family: "Manrope", sans-serif !important;
+    color: rgb(22, 123, 255) !important;
+    font-size: 0.9rem !important;
+}
+
+.navTextHighlight{
+    font-family: "Manrope", sans-serif !important;
+    color: primary !important;
+    font-weight: 600;
+}

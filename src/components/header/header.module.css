@@ -1,0 +1,33 @@
+.header{
+    min-height: 55px;
+    padding-top: 7px;
+    font-size: 1rem;
+    
+}
+
+.logo{
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.navMain{
+    text-align: right;
+    font-size: 1rem;
+}
+
+.logoLnk{
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.logoLnk:hover{
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+}

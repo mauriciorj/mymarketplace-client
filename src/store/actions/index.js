@@ -1,12 +1,10 @@
-// List of action from burguerBuilder.js
 export {
-    recoveryEmailInit,
-    recoveryEmailFailed,
-    recoveryEmailSuccess,
+    recoveryEmail,
     recoveryTokenCheck,
-    recoveryTokenCheckSuccess,
-    recoveryTokenCheckFailed,
     resetPassword,
-    resetPasswordSuccess,
-    resetPasswordFailed
+    sendLogin,
 } from './login';
+
+export {
+    registerUser
+} from './register'

@@ -1,0 +1,42 @@
+.footerMainDiv{
+    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.footerTitle{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(85, 85, 85);
+}
+
+.listItem{
+    border: 0px !important;
+    background-color: rgb(188, 204, 228) !important;
+    height: 30px !important;
+    color: rgb(109, 109, 109);
+}
+
+.listItem:hover{
+    color: rgb(22, 123, 255) !important;
+}
+
+.footerFollowUs{
+    text-align: center;
+    padding-left: 12px;
+    padding-top: 10px;
+}
+
+.footerSocialIcon{
+    color: rgb(109, 109, 109);
+    margin-right: 10px;
+}
+
+.copyRightRow{
+    padding-top: 40px;
+    width: 100%;
+    font-size: 0.8rem;
+    color: rgb(109, 109, 109);
+}
+

@@ -1,0 +1,25 @@
+.title{
+    padding-bottom: 20px;
+}
+
+.text{
+    padding-left: 20px;
+}
+
+.helpItem{
+    margin-bottom: 10px;
+    background-color: white !important;
+    color: black !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    background-color: white !important;
+    border-bottom: 0px !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.cardText{
+    border: 0px !important;
+}

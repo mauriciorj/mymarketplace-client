@@ -56,12 +56,8 @@ Login / Register / Recovery email
   display: inline-block;
   text-decoration: none;
   font-family: 'Manrope', sans-serif;
-  font-size: 1.05rem;
   color: #7b848c;
-  font-weight: 700;
-  transition: 0.1s;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-weight: 600;
 }
 
 .linkBreadcrumbLogin:active{

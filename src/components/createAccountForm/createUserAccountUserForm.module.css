@@ -67,6 +67,38 @@
     box-shadow: none !important;
 }
 
+.inputConfigInvalid{
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid red !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputConfigInvalid::placeholder{
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inputConfigInvalid:focus{
+    color: red !important;
+    border: 2px solid red;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: 0.2s ease-in-out;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .inputGroupPrepend{    
     border-top: 0 !important;
     border-right: 0 !important;
@@ -77,6 +109,17 @@
     outline: none !important;
     box-shadow: none !important;
 }
+
+.inputGroupPrependInvalid {
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    background-color: white !important;
+    border-bottom: 1px solid red !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
 
 .inputGroup{
     background-color: white !important;
@@ -107,8 +150,14 @@
 }
 
 .formGroupMargin{
-    margin-top: 10px;
+    margin-top: 30px;
 }
+
+.checkBox{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
 
 .dropDownCountry{
     padding-top: 5px;
@@ -128,9 +177,42 @@
     min-width: 250px !important;
 }
 
+.dropDownCountryMinWidthInvalid{
+    min-width: 250px !important;
+    border-color: red !important;
+}
+
+.dropDownYear{
+    padding-top: 5px;
+    margin-left: 12px;
+    width: 70px !important;
+}
+
+.dropDownYearInvalid{
+    padding-top: 5px;
+    margin-left: 12px;
+    width: 70px !important;
+    border: 1px red !important;
+    border-color: red !important;
+}
+
+.dropDownMonth{
+    padding-top: 5px;
+    margin-left: 12px;
+    width: 110px !important;
+}
+
+.dropDownDay{
+    padding-top: 5px;
+    margin-left: 12px;
+    width: 70px !important;
+}
+
 .inputMobileRow{
     padding-left: 20px;
 }
+
+
 
 .inputMobile1{
     max-width: 55px !important;
@@ -142,6 +224,60 @@
     outline: none !important;
     box-shadow: none !important;
     text-align: center !important;
+}
+
+.inputMobile1Invalid{
+    max-width: 55px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid red !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+
+.inputYear{
+    max-width: 70px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: left !important;
+    margin-left: 10px !important;
+    margin-right: 30px !important;
+}
+
+.inputMonth{
+    max-width: 65px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: left !important;
+    margin-left: 10px !important;
+    margin-right: 30px !important;
+}
+
+.inputDay{
+    max-width: 50px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: left !important;
+    margin-left: 10px !important;
 }
 
 .inputMobile1::placeholder{
@@ -175,6 +311,20 @@
     border-right: 0 !important;
     border-left: 0 !important;
     border-bottom: 1px solid #007bff !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.inputMobile2Invalid{
+    max-width: 55px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid red !important;
     border-radius: 0 !important;
     outline: none !important;
     box-shadow: none !important;
@@ -224,6 +374,18 @@
     text-align: center !important;
 }
 
+.inputMobile3Invalid{
+    max-width: 65px !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid red !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
 .inputMobile3::placeholder{
     max-width: 65px !important;
     font-family: 'Manrope', sans-serif !important;
@@ -252,3 +414,30 @@
 .radioConfig{
     width: 100px !important;
 }
+
+.radioConfigInvalid{
+    width: 100px !important;
+    color: red !important;
+}
+
+.radioConfigNotInfomed{
+    width: 110px !important;
+}
+
+.radioConfigNotInfomedInvalid{
+    width: 110px !important;
+    color: red !important;
+}
+
+.terms:hover{
+    color: #007bff !important;
+}
+
+.alertArea{
+    padding-top: 10px;
+    width: 100%;
+}
+
+.eyeIcon:hover{
+    color: #007bff !important;
+  }

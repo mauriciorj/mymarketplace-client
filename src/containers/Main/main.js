@@ -1,17 +1,50 @@
-import React, { Component } from 'react';
+import React from 'react';
+import classes from './main.module.css'
 import { Link } from 'react-router-dom';
+import HeaderMainPage from '../../components/header/header';
+import Jumbotron from '../../components/mainPage/jumbotron';
+import ThreeSteps from '../../components/mainPage/threeSteps';
+import TalkningAboutUs from '../../components/mainPage/talkingAboutUs';
+import ButtonCreateAccount from '../../components/buttons/createFreeAccount';
+import Footer from '../../components/footer/footer';
 
-class Main extends Component {
+function Main() {
 
-    render(){
-        return(
-            <div>
-                <h1>Main Component</h1>
-                <h3><Link to="/login">Login</Link></h3>
-                <h3><Link to="/registeruser">Register</Link></h3>
+    return (
+        <div>
+            <div className={classes.headerDiv}>
+                <div className={`container`}>
+                    <HeaderMainPage />
+                </div>
             </div>
-        )
-    }
+            <div className={`jumbotron ${classes.jumbotron}`}>
+                <div className={`container`}>
+                    <Jumbotron />
+                </div>
+            </div>
+            <div>
+                <div className={`container`}>
+                    <ThreeSteps />
+                </div>
+            </div>
+            <div>
+                <div className={`container`}>
+                    <TalkningAboutUs />
+                </div>
+            </div>
+            <div>
+                <div className={`container ${classes.ButtonCreateAccount}`}>
+                <Link to="/registerOptions"><ButtonCreateAccount /></Link>
+                </div>
+            </div>
+            <div className={classes.footerDiv}>
+                <div className={`container`}>
+                    <Footer />
+                </div>
+            </div>
+        </div>
+    )
+
 
 }
 

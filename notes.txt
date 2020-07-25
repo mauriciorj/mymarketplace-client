@@ -1,0 +1,14 @@
+Didn't find
+
+* commented code is under test
+
+App.js
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { faKey, faAt, faHome, faUser, faEye, faUsers, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+
+// library.add(faKey, faAt, faHome, faUser, faEye, faUsers, faUserPlus);
+
+
+index.js
+// import 'bootstrap-social/bootstrap-social.css';
+react-redux

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import axios from '../../axios/axios';
 import * as actions from '../../store/actions/index';
-import { Alert, Breadcrumb, BreadcrumbItem, Label, FormGroup, Form, Input, Button, Badge, Row, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
+import { Alert, Breadcrumb, BreadcrumbItem, Label, FormGroup, Form, Input, Button, Row, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import HomeIcon from '@material-ui/icons/Home';
@@ -10,6 +10,8 @@ import LockOpenOutlinedIcon from '@material-ui/icons/LockOpenOutlined';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import classes from './recoveryPasswordComponent.module.css';
 import validation from '../../shared/validation';
+import NotRegistered from './notRegistered';
+import Spinner from '../spinner/spinner';
 
 const ForgotPassword = (props) => {
 
@@ -19,14 +21,16 @@ const ForgotPassword = (props) => {
             placeholder: 'Your E-Mail here',
             showErrorMessage: null,
             value: '',
-            valid: null
-        }
+            valid: null,
+            sent: false
+        },
+        loading: null
     })
 
     // Validate email
     const emailValidation = (event) => {
 
-        let valueReceived = event.target.value
+        let valueReceived = event.target.value.toLowerCase()
 
         const oldObjt = { ...formConfig }
         oldObjt.email.value = valueReceived;
@@ -39,6 +43,7 @@ const ForgotPassword = (props) => {
             oldObjt.email.valid = false;
             oldObjt.email.errorMessage = null;
             oldObjt.email.showErrorMessage = null;
+            oldObjt.email.sent = false;
             setFormConfig(oldObjt);
         } else {
             if (validEmail) {
@@ -47,12 +52,14 @@ const ForgotPassword = (props) => {
                 oldObjt.email.valid = true;
                 oldObjt.email.errorMessage = null;
                 oldObjt.email.showErrorMessage = null;
+                oldObjt.email.sent = false;
                 setFormConfig(oldObjt);
             } else {
                 //email is not valid and the error will be updated
                 const oldObjt = { ...formConfig }
                 oldObjt.email.valid = false;
                 oldObjt.email.errorMessage = 'Please insert a valid email.';
+                oldObjt.email.sent = false;
                 setFormConfig(oldObjt);
             }
         }
@@ -63,6 +70,7 @@ const ForgotPassword = (props) => {
         if (formConfig.email.valid === false && formConfig.email.errorMessage !== null) {
             const oldObjt = { ...formConfig }
             oldObjt.email.showErrorMessage = true;
+            oldObjt.email.sent = false;
             setFormConfig(oldObjt);
         }
     }
@@ -72,8 +80,8 @@ const ForgotPassword = (props) => {
         const oldObjt = { ...formConfig }
         oldObjt.email.valid = false;
         oldObjt.email.errorMessage = null;
-        oldObjt.email.showErrorMessage = false;
         oldObjt.email.showErrorMessage = null;
+        oldObjt.email.sent = false;
         setFormConfig(oldObjt);
     }
 
@@ -84,8 +92,7 @@ const ForgotPassword = (props) => {
         if (formConfig.email.valid === true) {
             props.onRecoveryEmail(formConfig.email.value);
         }
-
-        if (formConfig.email.value === '') {
+        if (formConfig.email.value === '' && formConfig.email.sent === false) {
             const oldObjt = { ...formConfig }
             oldObjt.email.showErrorMessage = true;
             oldObjt.email.errorMessage = 'Please insert your email.';
@@ -95,26 +102,22 @@ const ForgotPassword = (props) => {
 
     return (
         <div className={`container centrelizerForm`}>
-            <div className={`col-12 col-sm-8 col-md-6 breadcrumbDiv`}>
-                <Breadcrumb>
-                    <BreadcrumbItem className={classes.breadcrumMainItem}>
-                        <Link className={`linkBreadcrumbLogin`} to="/">
-                            <HomeIcon /> Home</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem active><LockOpenOutlinedIcon /> Recovery Password</BreadcrumbItem>
-                </Breadcrumb>
-            </div>
             <div className={`col-12 col-sm-8 col-md-6 centrelizerForm`}>
                 <Row className={`row clearfix d-flex ${classes.formTitle}`}>Recovery Password</Row>
-                <Form className={classes.formMargin} onSubmit={(e) => submitHandler(e)}>
-                    <FormGroup>
 
-                        {(props.validEmail === null) ?
+                {(props.loading)?
+                <Spinner />:
+                <div></div>}
+
+                {(props.validEmail === null) ?
                             <div></div> :
                             (props.validEmail) ?
-                                <Alert color="primary">We send an email with instructions.</Alert> :
-                                <Alert color="danger">Email didn't find. Please try again.</Alert>}
-
+                                <Alert className={classes.AlertPassword} color="primary">Done! We send an email with instructions.</Alert> :
+                                <Alert className={classes.AlertPassword} color="danger">Email didn't find. Please try again.</Alert>}
+                {(props.validEmail) ?
+                <div></div>:
+                <Form className={classes.formMargin} onSubmit={(e) => submitHandler(e)}>
+                    <FormGroup>
                         <Label className={classes.labelStyle}>Email</Label>
                         <InputGroup>
                             <InputGroupAddon addonType="prepend" >
@@ -149,23 +152,8 @@ const ForgotPassword = (props) => {
                         </Button>
                     </div>
                 </Form>
-                <hr className={classes.hrConfig} />
-                <div className={`row ${classes.registerDiv}`}>
-                    <div className={`col-6 col-sm-4 col-md-5`} >
-                        <p className={classes.registerText}>Not registered?</p>
-                    </div>
-                    <div className={`col-6`}>
-                        <Link
-                            className={`linkStyleRegisterPill`}
-                            to="/registeruser">
-                            <Badge
-                                className={`registerPill`}
-                                pill>
-                                Register Here!
-                                </Badge>
-                        </Link>
-                    </div>
-                </div>
+                }
+                <NotRegistered />
             </div>
         </div>
     );
@@ -173,14 +161,15 @@ const ForgotPassword = (props) => {
 
 const mapStateToProps = state => {
     return {
-        validEmail: state.validEmail,
+        validEmail: state.loginReducer.validEmail,
+        loading: state.loginReducer.loading
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         onRecoveryEmail: (email) =>
-            dispatch(actions.recoveryEmailInit(email))
+            dispatch(actions.recoveryEmail(email))
     };
 };
 

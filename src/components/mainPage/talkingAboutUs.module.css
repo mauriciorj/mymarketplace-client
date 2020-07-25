@@ -1,0 +1,38 @@
+.talkingAboutUsMainDiv{
+    padding-top: 20px;
+}
+
+.mainTitle{
+    font-family: "Manrope", sans-serif !important;
+    width: 100%;
+    padding-top: 20px;
+    min-height: 80px;
+    margin: 0 auto;
+    justify-content: center !important;
+    font-weight: 500 !important;
+}
+
+.cards{
+    width: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.card{
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    border: 0px !important;
+}
+
+.cardTitle{
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+}
+
+.imgSize{
+    max-height: 55% !important;
+    max-width: 55% !important;
+    height: auto !important;
+    margin-left: 22.5%;
+}
