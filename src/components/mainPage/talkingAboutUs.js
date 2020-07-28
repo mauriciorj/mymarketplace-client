@@ -9,11 +9,11 @@ function ThreeSteps() {
 
     return (
         <div className={classes.talkingAboutUsMainDiv}>
-            <div className={`row ${classes.mainTitle}`}>
+            <div className={`row text-center ${classes.mainTitle}`}>
                 <h3>What our users are talking about us</h3>
             </div>
             <div className={`row ${classes.cards}`}>
-                <Card className={`col-4 text-center ${classes.card}`}>
+                <Card className={`col-12 col-md-4 col-lg-4 order-1 text-center ${classes.card}`}>
                     <CardImg className={classes.imgSize} top src={threeSteps1} alt="Card image cap" />
                     <CardBody>
                         <CardTitle className={classes.cardTitle}>Flirck, Paul</CardTitle>
@@ -21,7 +21,7 @@ function ThreeSteps() {
                     </CardBody>
                 </Card>
 
-                <Card className={`col-4 text-center ${classes.card}`}>
+                <Card className={`col-12 col-md-4 col-lg-4 order-2 text-center ${classes.card}`}>
                     <CardImg className={`center-block ${classes.imgSize} `} top src={threeSteps2} alt="Card image cap" />
                     <CardBody>
                         <CardTitle className={classes.cardTitle}>Green, Ann</CardTitle>
@@ -29,7 +29,7 @@ function ThreeSteps() {
                     </CardBody>
                 </Card>
 
-                <Card className={`col-4 text-center ${classes.card}`}>
+                <Card className={`col-12 col-md-4 col-lg-4 order-3 text-center ${classes.card}`}>
                     <CardImg className={classes.imgSize} top src={threeSteps3} alt="Card image cap" />
                     <CardBody>
                         <CardTitle className={classes.cardTitle}>Bart, John</CardTitle>

@@ -16,7 +16,7 @@ function ThreeSteps() {
                 <h3>3 simple steps</h3>
             </div>
             <div className={`row ${classes.cards}`}>
-                <Card className={`col-4 order-first ${classes.card}`}>
+                <Card className={`col-12 col-md-4 col-lg-4 order-1 ${classes.card}`}>
                     <CardImg top width="100%" src={threeSteps1} alt="Card image cap" />
                     <CardBody>
                         <CardTitle className={classes.cardTitle}><div className="row"><div className="col-9">Search for a professional </div><div className="col-3"> <SearchIcon fontSize="large" /></div></div></CardTitle>
@@ -24,7 +24,7 @@ function ThreeSteps() {
                     </CardBody>
                 </Card>
 
-                <Card className={`col-4 order-first ${classes.card}`}>
+                <Card className={`col-12 col-md-4 col-lg-4  order-2 ${classes.card}`}>
                     <CardImg top width="100%" src={threeSteps2} alt="Card image cap" />
                     <CardBody>
                         <CardTitle className={classes.cardTitle}><div className="row"><div className="col-9">Choice the better day and time</div><div className="col-3"> <EventIcon fontSize="large" /></div></div></CardTitle>
@@ -32,7 +32,7 @@ function ThreeSteps() {
                     </CardBody>
                 </Card>
 
-                <Card className={`col-4 order-first ${classes.card}`}>
+                <Card className={`col-12 col-md-4 col-lg-4  order-3 ${classes.card}`}>
                     <CardImg top width="100%" src={threeSteps3} alt="Card image cap" />
                     <CardBody>
                         <CardTitle className={classes.cardTitle}><div className="row"><div className="col-9">Talk with the professional</div><div className="col-3"><DesktopWindowsIcon fontSize="large" /></div></div></CardTitle>

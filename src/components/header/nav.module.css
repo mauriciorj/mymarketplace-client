@@ -2,20 +2,30 @@
     margin-top: -4px !important;
 }
 
-.navText{
+.navTextLink{
     font-family: "Manrope", sans-serif !important;
     color: black !important;
     font-size: 0.9rem;
 }
 
-.navText:hover{
+.navTextLink:hover{
     font-family: "Manrope", sans-serif !important;
     color: rgb(22, 123, 255) !important;
     font-size: 0.9rem !important;
+    text-decoration: none !important;
 }
 
 .navTextHighlight{
     font-family: "Manrope", sans-serif !important;
     color: primary !important;
     font-weight: 600;
+    text-decoration: none !important;
+}
+
+.navItemList{
+    padding-left: 10px;
+}
+
+.navItemListSpecial{
+    padding-left: 20px;
 }

@@ -9,9 +9,8 @@ function Footer() {
 
     return (
         <div className={classes.footerMainDiv}>
-            <div className="row col">
-                <div className="col-1"></div>
-                <div className="col-3">
+            <div className="row col-10 ml-2">
+                <div className={`col-10 col-md-4 col-lg-4 order-1 ${classes.groupList}`}>
                     <div className={classes.footerTitle}>PSYCHY</div>
                     <ListGroup>
                     <ListGroupItem className={`d-flex align-items-center ${classes.listItem}`}><Link to="/registerOptions" className={`d-flex align-items-center ${classes.listItem}`}>Create Account</Link></ListGroupItem>
@@ -20,14 +19,14 @@ function Footer() {
                         <ListGroupItem className={`d-flex align-items-center ${classes.listItem}`}><Link to="/aboutUs" className={`d-flex align-items-center ${classes.listItem}`}>About</Link></ListGroupItem>
                     </ListGroup>
                 </div>
-                <div className="col-3">
+                <div className={`col-10 ol-md-4 col-lg-4 order-2 ${classes.groupList}`}>
                     <div className={classes.footerTitle}>SUPPORT</div>
                     <ListGroup>
                         <ListGroupItem className={`d-flex align-items-center ${classes.listItem}`}><Link to="/helpCenter" className={`d-flex align-items-center ${classes.listItem}`}>Help Center</Link></ListGroupItem>
                         <ListGroupItem className={`d-flex align-items-center ${classes.listItem}`}><Link to="/contactUs" className={`d-flex align-items-center ${classes.listItem}`}>Contact Us</Link></ListGroupItem>
                     </ListGroup>
                 </div>
-                <div className="col-3">
+                <div className={`col-10 col-md-4 col-lg-4 order-3 ${classes.groupList}`}>
                     <div className={classes.footerTitle}>Follow Us</div>
                     <div className={`row ${classes.footerFollowUs}`}><FacebookIcon className={classes.footerSocialIcon}/> <InstagramIcon className={classes.footerSocialIcon}/></div>
                 </div>

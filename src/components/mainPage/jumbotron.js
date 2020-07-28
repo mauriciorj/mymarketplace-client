@@ -8,8 +8,8 @@ function OpenDiv() {
 
     return (
         <div className={`row ${classes.rowDiv}`}>
-            <div className={`col ${classes.leftDiv}`}>
-                <div className={`col ${classes.jumboText}`}>
+            <div className={`col-12 col-md-12 col-lg-6 ${classes.leftDiv}`}>
+                <div className={`col-12 ${classes.jumboText}`}>
                     <h2>Your support any time, any where.</h2>
                     <br/>
                     <h5>We are here to provide the best support for everyone, any time and everywhere.</h5>
@@ -19,10 +19,9 @@ function OpenDiv() {
                     </div>
                 </div>
             </div>
-            <div className={`col ${classes.rightDiv}`}>
+            <div className={`col-12 md-12 col-lg-6 ${classes.rightDiv}`}>
                 <img src={img1} class="img-fluid" alt="Responsive image" />
             </div>
-
         </div>
     )
 }
