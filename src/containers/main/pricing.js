@@ -18,7 +18,7 @@ function RegisterOption() {
             </div>
             <div className={`container ${classes.jumbotronOption}`}>
                 <Breadcrumb>
-                    <BreadcrumbItem className={classes.breadcrumMainItem}><Link className={`linkBreadcrumbLogin`} to="/"><HomeIcon /> Home</Link></BreadcrumbItem>
+                    <BreadcrumbItem><Link className={`linkBreadcrumbLogin`} to="/"><HomeIcon /> Home</Link></BreadcrumbItem>
                     <BreadcrumbItem active><AttachMoneyIcon /> Pricing</BreadcrumbItem>
                 </Breadcrumb>
                 <div className={`text-left ${classes.aboutUsDiv}`}>

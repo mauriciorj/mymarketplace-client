@@ -139,8 +139,6 @@ const Login = (props) => {
 
     return (
         <div className={`container centrelizerForm`}>
-            <div className={`col-12 col-sm-8 col-md-6 breadcrumbDiv`}>
-            </div>
             <div className={`col-12 col-sm-8 col-md-6 centrelizerForm`}>
                 <Row className={`row clearfix d-flex ${classes.formTitle}`}>Login</Row>
 

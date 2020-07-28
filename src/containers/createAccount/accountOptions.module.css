@@ -8,8 +8,8 @@
 
 .jumbotronOption{
     padding-top: 10px;
-    padding-bottom: 50px;
-    height: 400px;
+    padding-bottom: 40px;
+    min-height: 400px;
 }
 
 .rowOptionsTitle{

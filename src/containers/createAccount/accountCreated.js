@@ -3,7 +3,7 @@ import HeaderMainPage from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import classes from './accountCreated.module.css';
 import { Breadcrumb, BreadcrumbItem} from 'reactstrap';
-import AccountCreated from '../../components/loginForm/accountCreatedMsg';
+import AccountCreated from '../../components/createAccountForm/accountCreatedMsg';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import DoneIcon from '@material-ui/icons/Done';
