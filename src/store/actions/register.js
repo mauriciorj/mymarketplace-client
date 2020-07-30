@@ -6,6 +6,7 @@ export const registerUser = (formValues) => {
         dispatch(registerUserStart());
         axios.post('/user/add', formValues)
         .then(response => {
+            console.log(response.data)
             dispatch(registerUserSuccess(response.data));            
         })
         .catch(error => {

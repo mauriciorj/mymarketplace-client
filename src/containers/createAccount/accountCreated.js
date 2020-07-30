@@ -21,7 +21,7 @@ function RegisterOption() {
                     <BreadcrumbItem className={classes.breadcrumMainItem}><Link className={`linkBreadcrumbLogin`} to="/"><HomeIcon /> Home</Link></BreadcrumbItem>
                     <BreadcrumbItem active><DoneIcon /> Account Created</BreadcrumbItem>
                 </Breadcrumb>
-                <div className={`text-left ${classes.aboutUsDiv}`}>
+                <div className={`text-center`}>
                     <AccountCreated/>
                 </div>
             </div>

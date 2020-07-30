@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as actions from '../../store/actions/index';
 import axios from '../../axios/axios';
 import { Tooltip, Alert, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Row, Breadcrumb, BreadcrumbItem, Label, FormGroup, Form, Input, Button, InputGroup, InputGroupAddon, InputGroupText, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
@@ -175,7 +176,8 @@ const Login = (props) => {
         },
         tooltipOpen: false,
         loading: null,
-        modal: false
+        modal: false,
+        apiAnswer: null
     })
 
     const changeFalseTrue = (event, inputField, params) => {
@@ -199,11 +201,11 @@ const Login = (props) => {
 
         let valueReceived = null;
 
-        if(inputField === "email"){
+        if (inputField === "email") {
             valueReceived = event.target.value.toLowerCase();
-        }else if(inputField === "firstName" || inputField === "lastName" || inputField === "city" || inputField === "addressLineOne"){
+        } else if (inputField === "firstName" || inputField === "lastName" || inputField === "city" || inputField === "addressLineOne") {
             valueReceived = event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1);
-        }else{
+        } else {
             valueReceived = event.target.value
         }
 
@@ -419,8 +421,29 @@ const Login = (props) => {
 
     }
 
-    if(props.registerResult){
-       return <Redirect to="/accountCreated" />
+
+    const apiResponse = () => {
+        if (props.registerResult === true) {
+            const oldObjt = { ...formConfig }
+            oldObjt.apiAnswer = true;
+            setFormConfig(oldObjt);
+        } else if (props.registerResult === 11000) {
+            const oldObjt = { ...formConfig }
+            oldObjt.apiAnswer = '11000';
+            setFormConfig(oldObjt);
+        } else if (props.registerResult === 'Error') {
+            const oldObjt = { ...formConfig }
+            oldObjt.apiAnswer = 'Error';
+            setFormConfig(oldObjt);
+        }
+    }
+
+    useEffect(() => {
+        apiResponse();
+    },[props.registerResult])
+
+    if(formConfig.apiAnswer === true){
+        return <Redirect to="/accountCreated" />
     }
 
     return (
@@ -1128,6 +1151,17 @@ const Login = (props) => {
                                 <Alert color="danger">{formConfig.submitHandler.errorMessage}</Alert>
                             </div> :
                             <div></div>}
+
+                        {(formConfig.apiAnswer === '11000') ?
+                            <div className={`text-center ${classes.alertArea}`}>
+                                <Alert color="danger">
+                                    <p>This email is already registered.</p>
+                                    <p>If you forgot your password, please recovery it <Link to="/recoveryPassword">here</Link>.</p>
+                                </Alert>
+                            </div> :
+                            <div></div>}
+
+
                         <div className={classes.alertArea}>
                             {(props.loading) ? <Spinner /> : null}
                         </div>
